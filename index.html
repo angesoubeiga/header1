@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BoudeRaga</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" integrity="sha384-3fdgwJw17Bi87e1QQ4fsLn4rUFqWw//KU0g8TvV6quvahISRewev6/EocKNuJmEw" crossorigin="anonymous">
+
+    <link href="public/css/header.css" rel="stylesheet">
+    <link href="public/css/main.css" rel="stylesheet">
+
+    <script src="public/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src=" https://use.fontawesome.com/8b96055ebc.js "></script>
+    <script src="https://use.fontawesome.com/8b96055ebc.js"></script>
+</head>
+
+<body>
+    <header role="header">
+        <nav class="menu" role="navigation">
+            <div class="inner">
+                <div class="m-left">
+                    <h1 class="logo">BoudeRaga</h1>
+                </div>
+                <div class="m-right">
+                    <a href="index.php" class="m-link"> <i class="far fa-home" aria-hidden="true"></i> Accueil</a>
+                    <a href="boutique.php" class="m-link"> <i class="far fa-shop" aria-hidden="true"></i> Boutique</a>
+                    <a href="panier.php" class="m-link"> <i class="far fa-basket" aria-hidden="true"></i> Panier</a>
+                    <?php if (!isset($_SESSION['user_id'])) {?>
+                    <a href="inscription.php" class="m-link"> S'inscrire</a>
+                    <a href="connexion.php" class="m-link"> Se Connecter</a>
+                    <?php 
+                    } else{?>
+                    <a href="my_account.php" class="m-link"> Mon Compte</a>
+                    <?php }?>
+                    <a href="condition_generale.php" class="m-link">Généralité</a>
+
+                </div>
+                <div class="m-nav-toggle">
+                    <span class="m-toggle-icon ">
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        $('.m-nav-toggle').click(function(e) {
+            e.preventDefault();
+            $('.m-right').toggleClass('.is-open');
+            $('.m-nav-toggle').toggleClass('.is-open');
+        })
+    </script>
+    <script src="public/js/main.js"></script>
+
+</body>
+
+</html>

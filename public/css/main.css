@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Roboto:wght@100;300;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+    font-family: Lato;
+    overflow-x: hidden;
+}
+
+.inner {
+    width: 80%;
+    margin: auto;
+}
